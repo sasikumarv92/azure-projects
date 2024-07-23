@@ -1,0 +1,65 @@
+Step 1: Create an Azure Storage Account
+Sign in to Azure Portal:
+Go to the Azure Portal and log in with your credentials.
+
+Create a Storage Account:
+
+In the left-hand menu, click on "Storage accounts".
+Click on "Create" to start the wizard.
+Select the Subscription and Resource Group where you want the storage account.
+Enter a unique name for your storage account. This must be globally unique.
+Select the Region where the storage account will be hosted.
+For Performance, choose either Standard or Premium depending on your needs.
+For Redundancy, choose a redundancy option such as Locally-redundant storage (LRS).
+Click "Review + Create" and then "Create" to finalize the setup.
+Step 2: Create a Blob Container
+Navigate to the Storage Account:
+
+Once the storage account is created, navigate to it in the Azure Portal.
+Create a Blob Container:
+
+In the storage account, click on "Containers" in the left-hand menu.
+Click "+ Container" to create a new container.
+Enter a name for the container (lowercase letters, numbers, and hyphens only).
+Set the Public access level:
+Private: No anonymous access.
+Blob: Anonymous read access for blobs only.
+Container: Anonymous read access for container and blobs.
+Click "Create".
+Step 3: Upload Files to the Blob Container
+Access the Container:
+
+Go to the Blob container you created.
+Upload Files:
+
+Click "Upload".
+Browse and select the files you want to upload.
+Optionally, you can configure the file upload settings.
+Click "Upload" to start uploading files.
+Step 4: Configure Access Settings
+Shared Access Signatures (SAS):
+
+In the storage account, click on "Shared access signature".
+Configure the SAS token settings such as allowed services (Blob), permissions (read, write, delete), start and expiry time, etc.
+Click "Generate SAS and connection string".
+Use the SAS token to access the storage resources securely.
+Access Control (IAM):
+
+To provide specific permissions to users, go to the storage account and click "Access control (IAM)".
+Click "Add role assignment".
+Select a role like Storage Blob Data Contributor or Storage Blob Data Reader.
+Assign access to a specific user or group.
+Click "Save" to apply the changes.
+CORS (Cross-Origin Resource Sharing):
+
+If you need to configure CORS, go to the storage account and click "CORS".
+Add CORS rules specifying allowed origins, methods, headers, and exposed headers.
+Step 5: Accessing the Blob Storage
+Using Azure Portal:
+You can access your blobs directly through the Azure Portal under the storage account and container section.
+
+Using Azure Storage Explorer:
+Download Azure Storage Explorer to manage and access your storage account locally.
+
+Using Azure SDKs or REST API:
+Use Azure SDKs for your preferred programming language or the REST API to programmatically access and manage your blobs.
